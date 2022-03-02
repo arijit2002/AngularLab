@@ -27,7 +27,7 @@
         <div class="card-body">
             <div class="form-group">
                 <label for="FName">First Name   : </label>
-                <input class="form-control" type="text" name="FName" [(ngModel)]="this.FirstName" required minlength="3" #F="ngModel">
+                <input class="form-control" [ngClass]="{'is-valid':F.valid, 'is-invalid':F.invalid}" type="text" name="FName" [(ngModel)]="this.FirstName" required minlength="3" #F="ngModel">
                 <br>
                 <div class="alert alert-danger" [hidden]="!(F.dirty && F.errors?.['required'])">
                     Enter First Name                    
@@ -39,7 +39,7 @@
             <br>
             <div class="form-group">
                 <label for="LName">Last Name   : </label>
-                <input class="form-control" name="LName" [(ngModel)]="this.LastName" required minlength="3" #L="ngModel"><br>
+                <input class="form-control" [ngClass]="{'is-valid':L.valid, 'is-invalid':L.invalid}" name="LName" [(ngModel)]="this.LastName" required minlength="3" #L="ngModel"><br>
                 <div class="alert alert-danger" [hidden]="!(L.dirty && L.errors?.['required'])">
                     Enter First Name                    
                 </div>
