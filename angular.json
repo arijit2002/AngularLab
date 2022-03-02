@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "lab1-ng": {
+    "lab2-ng": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/lab1-ng",
+            "outputPath": "dist/lab2-ng",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -31,7 +31,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/styles.sass",
+              "src/style.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
@@ -72,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "lab1-ng:build:production"
+              "browserTarget": "lab2-ng:build:production"
             },
             "development": {
-              "browserTarget": "lab1-ng:build:development"
+              "browserTarget": "lab2-ng:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +85,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "lab1-ng:build"
+            "browserTarget": "lab2-ng:build"
           }
         },
         "test": {
@@ -107,5 +109,5 @@
       }
     }
   },
-  "defaultProject": "lab1-ng"
+  "defaultProject": "lab2-ng"
 }
